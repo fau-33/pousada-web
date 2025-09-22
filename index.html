@@ -9,36 +9,53 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- topo -->
+    <!-- Topo -->
     <div class="topo">
       <div class="container-topo limitar-secao">
         <div class="container-link-logotipo">
-          <a href="index.html">Pousada <span>Secreta</span></a>
+          <a href="#home">Pousada <span>Secreta</span></a>
         </div>
-        <div class="container-links">
-          <a class="link-topo" href="#sobre">SOBRE</a>
-          <a class="link-topo" href="#rota">ROTA</a>
-          <a class="link-topo" href="quartos.html">QUARTOS</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </div>
-    </div>
-    <!-- Conteudo principal -->
-    <div class="conteudo-principal">
-      <div class="banner">
-        <div class="container-titulo-site">
-          <h1>Pousada Secreta</h1>
-          <p>A pousada reservada em Angra dos Reis</p>
+        <div class="container-links" id="navLinks">
+          <a class="link-topo" href="#sobre" onclick="closeMenu()">SOBRE</a>
+          <a class="link-topo" href="#rota" onclick="closeMenu()">ROTA</a>
+          <a class="link-topo" href="#quartos" onclick="closeMenu()">QUARTOS</a>
         </div>
       </div>
     </div>
 
-    <div id="bem-vindo" class="secao-container limitar-secao">
+    <!-- Conteúdo principal  -->
+    <div class="conteudo-principal">
+      <div class="banner" id="home">
+        <div class="container-titulo-site">
+          <h1>Pousada Secreta</h1>
+          <p>A pousada mais reservada em Angra dos Reis</p>
+          <a href="#quartos" class="cta-button">Reserve Agora</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="quartos" class="secao-container limitar-secao scroll-animate">
       <div class="container-descricao">
         <h2>SEJA BEM-VINDO(A)!</h2>
-        <p>Relaxe em nossas acomodações e curta o melhor de Angra dos Reis.</p>
-        <p>Temos quartos para solteiro, casal ou família.</p>
+        <p>
+          Relaxe em nossas acomodações luxuosas e curta o melhor de Angra dos
+          Reis.
+        </p>
+        <p>
+          Temos quartos especialmente preparados para solteiro, casal ou
+          família.
+        </p>
       </div>
       <div class="container-quartos">
         <div class="quarto">
@@ -47,7 +64,7 @@
             alt="Quarto de Solteiro"
             title="Quarto de Solteiro"
           />
-          <a href="quartos.html#solteiro">
+          <a href="#solteiro">
             <p>Quarto de Solteiro</p>
           </a>
         </div>
@@ -57,7 +74,7 @@
             alt="Quarto de Casal"
             title="Quarto de Casal"
           />
-          <a href="quartos.html#casal">
+          <a href="#casal">
             <p>Quarto de Casal</p>
           </a>
         </div>
@@ -67,68 +84,76 @@
             alt="Quarto Família"
             title="Quarto Família"
           />
-          <a href="quartos.html#familia">
+          <a href="#familia">
             <p>Quarto Família</p>
           </a>
         </div>
       </div>
     </div>
 
-    <div id="rota" class="secao-container">
+    <div id="rota" class="secao-container scroll-animate">
       <div class="container-descricao">
-        <h2>ROTA</h2>
-        <p>Veja como chegar até a pousada.</p>
+        <h2>NOSSA LOCALIZAÇÃO</h2>
+        <p>Veja como chegar até a pousada e explore os arredores.</p>
       </div>
       <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14692.471710812997!2d-43.3641911!3d-22.9826906!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x539cb07246f0e38d!2sVia%20Parque%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1612707978931!5m2!1spt-BR!2sbr"
           width="100%"
-          height="350"
+          height="400"
           frameborder="0"
-          style="border: 0"
+          style="
+            border: 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          "
           allowfullscreen
         ></iframe>
       </div>
     </div>
-    <div id="sobre" class="secao-container">
+
+    <div id="sobre" class="secao-container scroll-animate">
       <div class="container-descricao">
-        <h2>SOBRE A POUSADA!</h2>
-        <p>Conheça um pouco sobre nossa pousada.</p>
+        <h2>SOBRE A POUSADA</h2>
+        <p>
+          Conheça todos os detalhes que fazem da nossa pousada um lugar
+          especial.
+        </p>
       </div>
       <div class="container-cards">
         <div class="card">
-          <div class="container-cards-descricao">
-            <h3>A pousada</h3>
+          <div class="container-card-descricao">
+            <h3><i class="fas fa-home"></i> A Pousada</h3>
             <p>
-              A Pousada Dev dispõe de estacionamento privativo gratuito, piscina
-              ao ar livre e bar.
+              A Pousada Secreta dispõe de estacionamento privativo gratuito,
+              piscina ao ar livre, bar e área de lazer completa.
             </p>
           </div>
-          <div class="container-card-imagem">
-            <img src="./assets/img1.jpg" alt="Faixada" title="Faixada" />
+          <div class="container-card-img">
+            <img src="./assets/img1.jpg" alt="Fachada" title="Fachada" />
           </div>
         </div>
         <div class="card">
-          <div class="container-cards-descricao">
-            <h3>Nossos quartos</h3>
+          <div class="container-card-descricao">
+            <h3><i class="fas fa-bed"></i> Nossos Quartos</h3>
             <p>
-              Os quartos oferecem TV`s com canais a cabo, cozinha compacta e
-              área de refeições, além de ar-condicionado e guarda-roupa.
+              Os quartos oferecem TV's com canais a cabo, cozinha compacta, área
+              de refeições, ar-condicionado e guarda-roupa.
             </p>
           </div>
-          <div class="container-card-imagem">
+          <div class="container-card-img">
             <img src="./assets/img2.jpg" alt="Quartos" title="Quartos" />
           </div>
         </div>
         <div class="card">
-          <div class="container-cards-descricao">
-            <h3>Alimentação</h3>
+          <div class="container-card-descricao">
+            <h3><i class="fas fa-utensils"></i> Alimentação</h3>
             <p>
               A pousada serve café da manhã em estilo continental ou buffet.
               Nossos restaurantes funcionam 24hrs.
             </p>
           </div>
-          <div class="container-card-imagem">
+          <div class="container-card-img">
             <img
               src="./assets/img3.jpg"
               alt="Restaurante"
@@ -137,16 +162,20 @@
           </div>
         </div>
         <div class="card">
-          <div class="container-cards-descricao">
-            <h3>Recepção</h3>
-            <p>Nossa recepção fica aberta 24hrs.</p>
+          <div class="container-card-descricao">
+            <h3><i class="fas fa-concierge-bell"></i> Recepção</h3>
+            <p>
+              Nossa recepção fica aberta 24hrs com atendimento personalizado e
+              serviços exclusivos.
+            </p>
           </div>
-          <div class="container-card-imagem">
+          <div class="container-card-img">
             <img src="./assets/img5.jpg" alt="Recepção" title="Recepção" />
           </div>
         </div>
       </div>
     </div>
+
     <!-- Rodapé -->
     <div class="rodape">
       <div class="container-info limitar-secao">
@@ -156,39 +185,38 @@
 
         <div class="card-info-rodape">
           <a target="_blank" href="https://goo.gl/maps/wPAS58QxiTopxK6w7">
-            <img
-              src="./assets/icones/endereco.png"
-              alt="Ícone endereco"
-              title="Ícone endereco"
-            />
-            <p>Endereço Av. 123, 222 - Rio de Janeiro RJ</p>
+            <i
+              class="fas fa-map-marker-alt"
+              style="font-size: 40px; margin-right: 15px"
+            ></i>
+            <p>Endereço: Av. 123, 222 - Rio de Janeiro RJ</p>
           </a>
         </div>
 
         <div class="card-info-rodape">
-          <img
-            src="./assets/icones/telefone.png"
-            alt="Ícone telefone"
-            title="Ícone telefone"
-          />
-          <p>Cel: 5521000000000</p>
+          <i
+            class="fas fa-phone"
+            style="font-size: 40px; margin-right: 15px"
+          ></i>
+          <p>Cel: (21) 99999-9999</p>
         </div>
 
         <div class="card-info-rodape">
-          <a
-            target="_blank"
-            href="https://www.booking.com/searchresults.pt-br.html?aid=375635;label=msn-wLZ0m4wRNI00wFHQAaaO3w-79920787059858%3Atikwd-79920803013016%3Aaud-808219487%3Aloc-20%3Aneo%3Amte%3Adec%3Aqsbooking;sid=9ca5cbe6c9db71b34b98c0738ea780f4;dest_id=-666610;dest_type=city&"
-          >
-            <img
-              src="./assets/icones/calendario.png"
-              alt="Ícone calendario"
-              title="Ícone calendario"
-            />
+          <a target="_blank" href="https://www.booking.com">
+            <i
+              class="fas fa-calendar-alt"
+              style="font-size: 40px; margin-right: 15px"
+            ></i>
             <p>Faça sua reserva pelo Booking.com</p>
           </a>
         </div>
       </div>
-      <div class="container-copright">© Copyright - PousadaDev</div>
+      <div class="container-copright">
+        © 2024 Copyright - Pousada Secreta. Desenvolvido por
+        <a href="https://github.com/fau-33">Flávio Félix</a>
+      </div>
     </div>
+
+    <script src="./scripts.js"></script>
   </body>
 </html>
